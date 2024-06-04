@@ -10,25 +10,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _hello_world_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 // import './hello-world-button.css';
 
-
-class HelloWorldButton {
-    render() {
-        const button = document.createElement('button');
-        button.innerHTML = 'Hello world';
-        button.classList.add('hello-world-button');
-        button.onclick = function () {
-            const p = document.createElement('p');
-            p.innerHTML = 'Hello world';
-            p.classList.add('hello-world-text');
-            body.appendChild(p);
-        }
-        const body = document.querySelector('body');
-        body.appendChild(button);
+var HelloWorldButton = /*#__PURE__*/function () {
+  function HelloWorldButton() {
+    _classCallCheck(this, HelloWorldButton);
+    _defineProperty(this, "buttonCssClass", 'hello-world-button');
+  }
+  return _createClass(HelloWorldButton, [{
+    key: "render",
+    value: function render() {
+      var button = document.createElement('button');
+      var body = document.querySelector('body');
+      button.innerHTML = 'Hello world';
+      // button.classList.add('hello-world-button');
+      button.onclick = function () {
+        var p = document.createElement('p');
+        p.innerHTML = 'Hello world';
+        p.classList.add('hello-world-text');
+        body.appendChild(p);
+      };
+      button.classList.add(this.buttonCssClass);
+      body.appendChild(button);
     }
-}
-
+  }]);
+}();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HelloWorldButton);
 
 /***/ }),
@@ -467,17 +480,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _alt_text_txt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 
 
-
 function addImage() {
-    const img = document.createElement('img');
-    // img.alt = 'Porsche 911 GT3 RS';
-    img.alt = _alt_text_txt__WEBPACK_IMPORTED_MODULE_1__;
-    img.width = 1366
-    img.src = _car_png__WEBPACK_IMPORTED_MODULE_0__;
-    const body = document.querySelector('body');
-    body.appendChild(img);
+  var img = document.createElement('img');
+  // img.alt = 'Porsche 911 GT3 RS';
+  img.alt = _alt_text_txt__WEBPACK_IMPORTED_MODULE_1__;
+  img.width = 1366;
+  img.src = _car_png__WEBPACK_IMPORTED_MODULE_0__;
+  var body = document.querySelector('body');
+  body.appendChild(img);
 }
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addImage);
 
 /***/ }),
@@ -579,8 +590,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_image_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
 
 
-
-const helloWorldButton = new _components_hello_world_button_hello_world_button_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
+var helloWorldButton = new _components_hello_world_button_hello_world_button_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
 helloWorldButton.render();
 
 // helloWorld();
