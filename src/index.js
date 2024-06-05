@@ -7,6 +7,7 @@ heading.render();
 
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();
+// helloWorldButton.render();
 
 // helloWorld();
 // addImage();
